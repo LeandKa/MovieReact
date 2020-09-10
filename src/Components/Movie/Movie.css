@@ -1,0 +1,128 @@
+.section-media{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.buttons-redirect{
+    
+background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.button-s{
+    cursor: pointer;
+    margin-top: 10px;
+    color:white;
+    padding: 10px;
+    border-radius: 50%;
+    margin-left: 4px;
+    background-color: transparent;
+}
+
+.button-s:hover{
+    background-color: red;
+}
+
+.button-s:focus{
+    outline: 0;
+    background-color: red;
+}
+.container-title{
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+@media screen and (max-width: 960px) {
+
+    .buttons-redirect{
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .button-s{
+        cursor: pointer;
+        display: block;
+        margin-top: 10px;
+        color:white;
+        padding: 10px;
+        border-radius: 50%;
+        margin-left: 4px;
+        background-color: transparent;
+    }
+    .button-s:hover{
+        background-color: red;
+    }
+
+    .button-s:checked{
+        background-color: royalblue;
+    }
+    
+    .button-s:focus{
+        outline: 0;
+        background-color: red;
+    }
+
+    .container-title{
+        font-size: 20px;
+        margin: 0%;
+        color: white;
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+}
+
+.container{
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+}
+
+.container-ul{
+    margin-top: 70px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.container-li{
+    width: 200px;
+    border: 0;
+    border-radius: 12px;
+    box-shadow: 0 6px 10px -4px rgba(0, 0, 0, .15);
+    background-color: transparent;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.loading{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-content: center;
+    height: 100%;
+    size: 600px;
+   background-color: black;
+}
+
+.loading-spinner{
+    color: cadetblue;
+    width: 600px;
+    height: 600px;
+    text-align: center;
+}
