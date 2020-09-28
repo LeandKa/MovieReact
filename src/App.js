@@ -1,29 +1,35 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import './App.css';
-import Movie from './Components/Movie/Movie';
-import MoviePlaying from './Components/Movie/MoviePlaying';
-import MovieRatings from './Components/Movie/MovieRatings';
-import MovieUncoming from './Components/Movie/MovieUncoming';
-import NavBar from './Components/novo/NavBar';
-import 'semantic-ui-css/semantic.min.css'
+import Movie from './Page/Movie/Movie';
+import 'semantic-ui-css/semantic.min.css';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
-import MovieUnit from './Components/Movie/MovieUnit';
+import MovieUnit from './Page/Movie/MovieUnit';
+import Login from './Page/Login/Login';
 
 function App() {
+
+
+  useEffect(()=>{
+    
+  var es = document.querySelector('body');
+   es.style.height="100%";
+   es.style.width="100%"
+   es.style.backgroundColor = "black";
+
+  },[])
+
+
   return (
-    <div className="App">
+    <div className="app" style={{backgroundColor:'black'}}> 
       <Router>
-        <NavBar></NavBar>
-        <Switch >
+        <Switch>
           <Route path="/" exact component={Movie}></Route>
           <Route path="/movie/:movieId" exact component={MovieUnit}></Route>
-          <Route path="/movies/:moviePath" exact component={Movie}></Route>
-          <Route path="/movies/:moviePath" exact component={Movie}></Route>
-          <Route path="/movies/:moviePath" exact component={Movie}></Route>
+          <Route path="/login" exact component={Login}></Route>
         </Switch>
       </Router>
     </div>

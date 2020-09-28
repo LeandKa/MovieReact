@@ -1,0 +1,104 @@
+.media{
+    display: flex;
+    flex-direction: column;
+    background: url("../../Img/photo-1489599849927-2ee91cede3ba.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;   
+}
+.section-login{
+    height: 100%;
+    margin-top: 200px;
+    border-radius: 20px 20px 20px 20px;
+    background:linear-gradient(300deg, rgb(63, 60, 60) 0%, rgba(0,0,0,0) 100%);
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 40px;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    padding: 30px;
+    height: auto;
+}
+
+.login-form-input{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.login-form-input span{
+   color: white;
+}
+.login-form-input input{
+    height: 30%;
+}
+
+.login-form-input button{
+    color: white;
+    background-color: black;
+    border: 3px solid white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px 20px 20px 20px;
+}
+.login-form-input button:hover{
+    cursor: pointer;
+   border-radius: 4px;
+    color: rgb(255, 30, 0);
+    transition: all 0.2s ease-out;
+   opacity: 0.8;
+}
+
+.login-form-input a{
+   text-align: center;
+    text-decoration: none;
+   color: white;
+}
+
+.login-form-input a:hover{
+    cursor: pointer;
+    color: red;
+}
+
+
+.footer{
+    text-align: center;
+    color: white;
+    margin-top: 45px;
+    background-color: transparent;
+    padding: 30px;
+  }
+  
+  .footer a {
+      text-decoration: none;
+  
+  }
+  footer a:hover{
+      cursor: pointer;
+  }
+
+
+  @media screen and (max-width: 960px) {
+    .login-form-input button{
+        display: block;
+        color: white;
+        background-color: black;
+        border: 3px solid white;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 20px 20px 20px 20px;
+    }
+    .login-form-input button:hover{
+        cursor: pointer;
+       border-radius: 4px;
+        color: rgb(255, 30, 0);
+        transition: all 0.2s ease-out;
+       opacity: 0.8;
+    }
+  }

@@ -1,19 +1,19 @@
 .container-card{
     display: flex;
+    position: relative;
     flex-direction:row;
+    margin-top: 10px;
+    height: auto;
     align-content: center;
     justify-content: center;
     background-color: black;
     border-radius: 10px 10px;
+    top:0;
+    transition: all 0.1s ease-in-out;
 }
 
 .container-card:hover{
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-    box-shadow: 0 6px 10px -4px rgba(0, 0, 0, .15);
+    top:-10px;
 }
 
 .card a{
@@ -23,35 +23,46 @@
 
 .card-image{
     width: 100%;
+    margin-top: 10px;
     border-top-left-radius: calc(.25rem - 1px);
     border-top-right-radius: calc(.25rem - 1px);
 }
 .card-body{
-    flex:1  auto;
-    padding: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding:10px;
 }
+
 
 .card-title{
     color:white;
     font-size: 15px;
+    width: 80%;
+    margin-bottom: .25rem!important;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .card-data{
     color: white;
-    font-size: 10px;
+    font-size: 12px;
+    width: 80%;
     font-family: sans-serif;
-    margin-left: 20px;
+    letter-spacing: 1px;
+    padding: 10px;
 }
 
 .card-ratings{
-    color: white;
-    float: right;
+    position: absolute;
     right: 7px;
-    top:7px;
+    top: 290px;
     background-color: #212529;
-    padding: 10px;
+    padding: 5px;
+    color: white;
     text-align: center;
     display: block;
+    min-width: 35px;
     font-size: .8em;
     border-radius: 50%;
     border: 2px solid #343a40;

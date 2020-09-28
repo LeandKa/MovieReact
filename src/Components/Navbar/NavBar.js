@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import './NavBar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes, faBars } from '@fortawesome/free-solid-svg-icons'
+import GitHubIcon from '@material-ui/icons/GitHub';
+import firebase from '../../Firebase';
 
 
 export default class NavBar extends Component {
@@ -18,8 +20,27 @@ export default class NavBar extends Component {
         this.setState({ clicked: !this.state.clicked })
     }
 
+    onClick = () =>{
+      firebase.auth().signOut().then(function() {
+        localStorage.removeItem('login');
+        window.location.reload();
+      }).catch(function(error) {
+        alert(error.message);
+      });
+    }
+
 
     render() {
+
+        const log = () =>{
+            if(localStorage.getItem('login')){
+              return( <a className="nav-links-button" onClick={this.onClick}>Logout</a>)
+            }else{
+               return (<a className="nav-links-button" href={'/login'}>Login</a>)
+            }
+        }
+
+
         return (
             <nav className="NavbarItems">
                 <a className="navbar-logo" href="/" >React</a>
@@ -32,13 +53,16 @@ export default class NavBar extends Component {
                 </div>
                 <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
                     <li>
-                        <a className="nav-links" href={'/'}>Popular</a>
+                        <a className="nav-links" href={'#'}>Popular</a>
                     </li>
                     <li>
-                        <a className="nav-links" href={'/'}>Popular</a>
+                         {log()}
                     </li>
+
                     <li>
-                        <a className="nav-links" href={'/'}>Popular</a>
+                        <span className="nav-links">
+                          <a href="https://github.com/LeandKa/MovieReact"><GitHubIcon></GitHubIcon></a>
+                        </span>
                     </li>
                 </ul>
             </nav>
